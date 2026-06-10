@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME"
+   target="_blank"
+   style="font-size:30px;color:#38bdf8;">
+   <i class="fab fa-linkedin"></i>
+</a>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lusanda Musa Banzi | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.6rem;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    padding:100px 10%;
+    background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1600');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    color:#38bdf8;
+    animation:slideIn 2s ease;
+}
+
+.hero-content h2{
+    margin-top:10px;
+    font-size:2rem;
+}
+
+.hero-content p{
+    margin-top:20px;
+    line-height:1.8;
+    color:#ddd;
+}
+
+.hero-image img{
+    width:350px;
+    height:350px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #38bdf8;
+    box-shadow:0 0 40px #38bdf8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 30px;
+    text-decoration:none;
+    background:#38bdf8;
+    color:black;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+/* SECTIONS */
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+    color:#38bdf8;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:20px;
+    margin-bottom:20px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.certificates{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.certificates a{
+    text-decoration:none;
+    color:black;
+    background:#38bdf8;
+    padding:15px 25px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+footer{
+    background:black;
+    text-align:center;
+    padding:30px;
+}
+
+#visitorCounter{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#38bdf8;
+    color:black;
+    padding:10px 15px;
+    border-radius:10px;
+    display:none;
+    font-weight:bold;
+}
+
+@keyframes slideIn{
+    from{
+        opacity:0;
+        transform:translateX(-100px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@media(max-width:900px){
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+.hero-content h1{
+    font-size:2.8rem;
+}
+.hero-image img{
+    width:250px;
+    height:250px;
+}
+}
+
+#education .card{
+    margin-bottom:25px;
+    border-left:5px solid #38bdf8;
+}
+
+#education h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+#experience h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+/* GALLERY */
+#gallery{
+    background:#111827;
+    overflow:hidden;
+    position:relative;
+}
+
+.gallery-description{
+    text-align:center;
+    max-width:900px;
+    margin:0 auto 40px;
+    color:#d1d5db;
+    line-height:1.8;
+}
+
+.gallery-container{
+    display:flex;
+    gap:25px;
+    width:max-content;
+    animation:galleryScroll 20s linear infinite;
+    padding:20px 0;
+	scroll-behavior:smooth;
+    padding:20px 10px;
+    scrollbar-width:flex;
+}
+.gallery-container::-webkit-scrollbar{
+    display:all;
+}
+
+.gallery-item{
+    flex:0 0 auto;
+    width:350px;
+}
+
+.gallery-container:hover{
+    animation-play-state:paused;
+}
+
+.gallery-item{
+    position:relative;
+    flex-shrink:0;
+    width:350px;
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.gallery-item img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    transition:transform .5s ease;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+.overlay{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    padding:20px;
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.9)
+    );
+    transform:translateY(100%);
+    transition:.4s;
+}
+
+.gallery-item:hover .overlay{
+    transform:translateY(0);
+}
+
+.overlay h3{
+    color:white;
+}
+
+@keyframes galleryScroll{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+@media(max-width:768px){
+
+.gallery-item{
+    width:260px;
+}
+
+.gallery-item img{
+    height:200px;
+}
+
+}
+#lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.97);
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    cursor:pointer;
+    backdrop-filter:blur(8px);
+}
+
+#lightbox-img{
+    max-width:95%;
+    max-height:95%;
+    object-fit:contain;
+    border-radius:10px;
+    animation:zoomIn .3s ease;
+}
+
+#close{
+    position:absolute;
+    top:20px;
+    right:40px;
+    font-size:50px;
+    color:white;
+    cursor:pointer;
+    z-index:100000;
+}
+
+@keyframes zoomIn{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.open-btn{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#38bdf8;
+    color:#000;
+    font-weight:bold;
+    cursor:pointer;
+    z-index:5;
+    transition:opacity .4s ease;
+    box-shadow:0 0 20px rgba(56,189,248,.6);
+}
+</style>
+</head>
+
+<div id="lightbox">
+    <span id="close">&times;</span>
+    <img id="lightbox-img">
+</div>
+<body>
+
+<nav>
+    <div class="logo">Banzi LMN Portfolio</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+		<li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certificates">Certificates</a>
+		<li><a href="#gallery">Art Gallery</a></li>
+		
+</li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+        <h1 id="greeting">Lusanda Musa Banzi</h1>
+
+        <h2>Computer Science Student | Junior Front-End Developer | Creative Artist | Founder of DripCartel Clothing</h2>
+
+        <p>
+            Third-Year Computer Science Student at Tshwane University of Technology
+            (Emalahleni Campus). Passionate about software development,
+            web technologies, UI/UX design, digital media, drawings,
+            paintings and creative problem solving.
+        </p>
+
+        <a href="https://github.com/LusandaBanzi" class="btn" target="_blank">
+            View My Projects
+        </a>
+		<a href="https://www.linkedin.com/in/lusanda-banzi-38b692381/"
+           class="btn"
+           target="_blank">
+           LinkedIn Profile
+        </a>
+    </div>
+
+    <div class="hero-image">
+        <img src="musa.png" alt="Lusanda Musa Banzi">
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="card">
+        <p>
+            My name is <strong>Lusanda Musa Banzi</strong>.
+            I am a Computer Science student at Tshwane University of Technology.
+            I specialize in Front-End Development and enjoy creating modern,
+            responsive and user-friendly web applications.
+
+            Outside software development, I am passionate about art,
+            including drawing and painting.
+
+            I also serve as a Media Specialist at:
+            <br><br>
+            • The Pentecostal Church Of God International Church
+            <br>
+            • Word Of Life Ministries International Church
+
+            <br><br>
+            Founder and Owner of <strong>DripCartel</strong> (Est. 2025).
+        </p>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+    <h2 class="section-title">Educational Background</h2>
+
+    <div class="card">
+        <h3>Primary School</h3>
+		<p><strong>2010 - 2016</strong></p>
+        <p>Nancy Shiba Primary School</p>
+
+        <br>
+
+        <a href="https://www.google.com/search?q=nancy+shiba+primary+school&sca_esv=5c97ab3475bd08d5&rlz=1C1CHBF_enZA1100ZA1100&sxsrf=ANbL-n7-q7Mxc6p99RZGWHggwlLqkg-oew%3A1781101498926&ei=unMpasebOLOahbIP68Lc-AQ&biw=1536&bih=776&gs_ssp=eJzj4tZP1zcsyUpKzkgzMGC0UjWoMExNTbQ0STQ2MjdOTrKwMLYyqEg2MDNNMU42sDC2SElOMjHykspLzEuuVCjOyExKVCgoysxNLKpUKE7OyM_PAQCwVhjy&oq=&gs_lp=Egxnd3Mtd2l6LXNlcnAiACoCCAAyDRAuGMcBGK8BGOoCGCcyDRAuGMcBGK8BGOoCGCcyBxAjGOoCGCcyBxAjGOoCGCcyBxAjGOoCGCcyDRAjGJ4GGPAFGOoCGCcyBxAjGOoCGCcyDRAjGPAFGJ4GGOoCGCcyDRAuGMcBGNEDGOoCGCcyDRAjGPAFGJ4GGOoCGCcyIBAuGIAEGIoFGJECGOcGGMcBGK8BGMgDGOoCGLQC2AEBMiAQLhiABBiKBRiRAhjnBhjHARivARjIAxjqAhi0AtgBATIgEC4YgAQYigUYkQIY5wYYxwEYrwEYyAMY6gIYtALYAQEyIBAuGIAEGIoFGJECGOcGGMcBGK8BGMgDGOoCGLQC2AEBMiAQLhiABBiKBRiRAhjnBhjHARivARjIAxjqAhi0AtgBAUidGVAAWABwAngBkAEAmAEAoAEAqgEAuAEByAEA-AEBmAICoAIRqAIPwgIKEAAYRxjWBBiwA5gDDPEFheYGpsTQ7neIBgGQBge6BgYIARABGAiSBwEyoAcAsgcAuAcAwgcHMC4xLjAuMcgHDYAIAQ&sclient=gws-wiz-serp"
+           class="btn"
+           target="_blank">
+           About  
+        </a>
+    </div>
+
+    <div class="card">
+        <h3>Secondary School</h3>
+        <p><strong>2017 - 2021</strong></p>
+        <p>Leonard Ntshuntshe Secondary School</p>
+
+        <br>
+
+        <a href="https://www.google.com/search?gs_ssp=eJwVxEEKgCAQAEC6Bv1BiM65lVo9oV-s26YHUdCi-n00h6mb3vUA1tzGvaOW1drJB5hxmRZlkI5ZW1jlo0kZZrKKhwmB7NYGThHzLuJZ_PXHojCluGN-RSGfUvgA4ZIdww&q=leonard+ntshuntshe+secondary+school&rlz=1C1CHBF_enZA1100ZA1100&oq=leonard&gs_lcrp=EgZjaHJvbWUqFggBEC4YrwEYxwEYkQIYgAQYigUYjgUyEAgAEAAYkQIY4wIYgAQYigUyFggBEC4YrwEYxwEYkQIYgAQYigUYjgUyBggCEEUYOTIPCAMQLhhDGLEDGIAEGIoFMg8IBBAAGEMYsQMYgAQYigUyEggFEC4YQxiDARixAxiABBiKBTIPCAYQLhhDGLEDGIAEGIoFMgYIBxBFGDzSAQg0MDcwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
+           class="btn"
+           target="_blank">
+           About  
+        </a>
+    </div>
+
+    <div class="card">
+        <h3>University</h3>
+		<p><strong>2024 - Present</strong></p>
+        <p>Tshwane University of Technology – eMalahleni Campus</p>
+
+        <br>
+
+        <a href="https://www.tut.ac.za"
+           class="btn"
+           target="_blank">
+           Visit TUT Website
+        </a>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+	
+    <h2 class="section-title">Work Experience</h2>
+
+    <div class="card">
+        <h3>Checkers Hyper Klipfontein</h3>
+        <p>2023 - 2024</p>
+    </div>
+
+    <div class="card">
+        <h3>Pick n Pay Hyper Klipfontein</h3>
+        <p>2024 - 2025</p>
+    </div>
+
+    <div class="card">
+        <h3>Studio88 Highveld Mall</h3>
+        <p>November 2025 - Present</p>
+    </div>
+	
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2 class="section-title">Achievements</h2>
+
+    <div class="skills">
+
+        <div class="card">
+            <h3>MAISH Hackathon 2025</h3>
+            <p>
+                Participated in the annual MAISH Hackathon hosted
+                by UMP and TUT.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Front-End Development</h3>
+            <p>
+                Building responsive websites using HTML, CSS,
+                JavaScript and modern UI design principles.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Creative Arts</h3>
+            <p>
+                Skilled in drawing, painting and visual creativity.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="gallery">
+    <h2 class="section-title">My work</h2>
+
+    <p class="gallery-description">
+        Drawing and painting are among my greatest passions.
+        Through art, I express creativity, patience, and attention
+        to detail—qualities that also influence my approach to
+        software development and design.
+    </p>
+
+    <div class="gallery-container">
+	
+	<div class="gallery-item">
+            <img src="dripcartelHoodie1.jpeg" alt="Artwork 1"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>DripCartel Hoodie</h3>
+            </div></div> <div class="gallery-item">
+            <img src="dripcartelHoodie2.jpeg" alt="Artwork 1"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>Dripcartel Hoodie2</h3>
+            </div></div>
+
+ <div class="gallery-item">
+            <img src="1000466542.jpg.jpeg" alt="Artwork 1"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>DripCartel Hoodie</h3>
+            </div>
+        </div>
+			<div class="gallery-item">
+            <img src="dripcartelapparel.jpeg" alt="Artwork 1"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>Dripcartel apparel</h3>
+            </div>
+			</div>
+			
+	
+	<div class="gallery-item">
+            <img src="oscarmbo.jpeg" alt="Artwork 4"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>Oscar Mbo Hand-painted T-shirt</h3>
+            </div>
+        </div>
+		
+		 <div class="gallery-item">
+            <img src="shebeshxt.jpeg" alt="Artwork 5"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>Shebesxht Hand-painted T-shirt</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="1000631889.jpg.jpeg" alt="Artwork 1"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>T-shirt Potrait</h3>
+            </div>
+        </div> <div class="gallery-item">
+            <img src="1000466427.jpg.jpeg" alt="Artwork 1"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>Personal Potrait</h3>
+            </div>
+        </div> <div class="gallery-item">
+            <img src="ratomo.jpeg" alt="Artwork 1"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>Mofokeng Potrait</h3>
+            </div>
+			</div> 
+			
+			<div class="gallery-item">
+            <img src="1000463493.jpg.jpeg" alt="Artwork 1"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>Kat Graham</h3>
+            </div>
+        </div>
+			
+
+			<div class="gallery-item">
+            <img src="1000466407.jpg.jpeg" alt="Artwork 1"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>Customer Potrait</h3>
+            </div>
+        </div>  <div class="gallery-item">
+            <img src="1000466441.jpg.jpeg" alt="Artwork 1"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>Customer Potrait</h3>
+            </div>
+        </div> <div class="gallery-item">
+            <img src="1000466359.jpg.jpeg" alt="Artwork 1"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>Tom drawing</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="1000466612.jpg.jpeg" alt="Artwork 2"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>Customer Potrait</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="1000578565.jpg.jpeg" alt="Artwork 3"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>Customer Potrait</h3>
+            </div>
+        </div>
+		
+		 <div class="gallery-item">
+            <img src="1000466446.jpg.jpeg" alt="Artwork 6"> <button class="open-btn">
+        Click to Open
+    </button>
+
+            <div class="overlay">
+                <h3>Hand-made Cardboard House</h3>
+            </div>
+        </div>
+
+       
+
+    </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates">
+    <h2 class="section-title">Certificates</h2>
+
+    <div class="certificates">
+
+        <a href="https://courses.cognitiveclass.ai/certificates/18e80d5ccb344a4e9b132ef9bb6e5134" target="_blank">
+            Data Science Tools Certificate
+        </a>
+
+        <a href="https://courses.cognitiveclass.ai/certificates/c79b597c85dd442691e9f0c9af38548a" target="_blank">
+            Data Science Foundations - Level 1
+        </a>
+
+        <a href="https://www.credly.com/badges/07aa67cc-a8bb-4ea8-a66b-153ae9e70dfb/public_url" target="_blank">
+            CyberSecurity Fundamentals Certificate
+        </a>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="socials">
+    <h2 class="section-title">Connect With Me</h2>
+
+    <div style="text-align:center;">
+
+        <a href="https://github.com/LusandaBanzi"
+           target="_blank"
+           class="btn">
+           GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/lusanda-banzi-38b692381/"
+           target="_blank"
+           class="btn">
+           LinkedIn
+        </a>
+
+        <a href="https://wa.me/27731659816"
+           target="_blank"
+           class="btn">
+           WhatsApp
+        </a>
+		
+		<a href="https://www.instagram.com/drip_cartelza?igsh=NTJ1dzNqaHVqamM1" target="_blank" class="btn">
+            @Instagram
+        </a>
+		
+
+    </div>
+</section>
+
+<footer>
+    <p>
+        © DripCartel | Est. 2025 | Designed & Developed by Lusanda  Banzi
+    </p>
+</footer>
+
+<div id="visitorCounter"></div>
+
+<script>
+
+// Animated typing greeting
+const greeting = document.getElementById("greeting");
+const text = "Welcome, I'm Lusanda Banzi";
+let i = 0;
+
+greeting.innerHTML = "";
+
+function typeWriter(){
+    if(i < text.length){
+        greeting.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter,80);
+    }
+}
+typeWriter();
+
+// Visitor counter
+let visits = localStorage.getItem("portfolioVisits");
+
+if(!visits){
+    visits = 1;
+}else{
+    visits = Number(visits) + 1;
+}
+
+localStorage.setItem("portfolioVisits", visits);
+
+// Only visible to you
+const params = new URLSearchParams(window.location.search);
+
+if(params.get("admin") === "1"){
+    const counter = document.getElementById("visitorCounter");
+    counter.style.display = "block";
+    counter.innerHTML = "Visits: " + visits;
+}
+
+const galleryItems = document.querySelectorAll('.gallery-item');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.getElementById('close');
+
+galleryItems.forEach(item => {
+
+    const img = item.querySelector('img');
+    const button = item.querySelector('.open-btn');
+
+    button.addEventListener('click', function(e){
+
+        e.stopPropagation();
+
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+
+        document.body.style.overflow = 'hidden';
+
+        button.style.opacity = "0";
+        button.style.pointerEvents = "none";
+
+    });
+
+});
+
+function closeLightbox(){
+
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto';
+
+    document.querySelectorAll('.open-btn').forEach(btn => {
+        btn.style.opacity = "1";
+        btn.style.pointerEvents = "auto";
+    });
+
+}
+closeBtn.addEventListener('click', closeLightbox);
+
+lightbox.addEventListener('click', function(e){
+
+    if(e.target === lightbox){
+        closeLightbox();
+    }
+
+});
+
+document.addEventListener('keydown', function(e){
+
+    if(e.key === "Escape"){
+        closeLightbox();
+    }
+
+});
+</script>
+
+</body>
+</html>
