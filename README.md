@@ -4,7 +4,7 @@ A clean, responsive, and professional developer portfolio showcasing my engineer
 
 ### 🚀 Live Demo
 
-You can view the live interactive website here: https:** //lusandabanzi.github.io/My-Portfolio-/ **
+You can view the live interactive website here: https://lusandabanzi.github.io/My-Portfolio-/ **
 
 ### 🛠️ Built With
 
