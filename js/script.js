@@ -6,7 +6,7 @@ window.addEventListener('load', function(){
  
 /* ---------- Animated typing greeting ---------- */
 var greeting = document.getElementById("greeting");
-var text = "I'm Lusanda Banzi";
+var text = "Welcome, I'm Lusanda Banzi";
 var i = 0;
 function typeWriter(){
     if(i < text.length){
